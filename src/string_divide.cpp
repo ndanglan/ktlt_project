@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string.h>
 #include<vector>
+#include "string_divide.h"
 using namespace std;
 
 vector<string> stringSplit(string str, char divideObject){
