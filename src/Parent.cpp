@@ -21,8 +21,8 @@ string Parent::getStaticString(){
     string result = "";
     result += "Input file: " + inputFiles + "\n";
     result += "Output file: " + outputFiles + "\n";
-    result = result + "Time Complete: " + "\n";
-    result = result + "Duration [second]: " + "\n";
+    result = result + "Time Complete: " + time.getEndTime() + "\n";
+    result = result + "Duration [second]: " + to_string(time.getDuration())+ "\n";
     result += "Word count in input files: " + to_string(numWords) + "\n";
     result += "Word converted: " + to_string(numConvertedWords) + "\n";
     result += "Word with error: " + to_string(numWords - numConvertedWords) + "\n";

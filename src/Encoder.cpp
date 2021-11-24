@@ -15,6 +15,9 @@ map<string, string> Encoder::getHashFunction(string, string){
 }
 
 string Encoder::transform(){
+    time.start();
     string result = "";
+    cout << "Encode completely";
+    time.end();
     return result;
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<string.h>
+#include "TimeClass.h"
 #include<map>
 using namespace std;
 
@@ -14,6 +15,8 @@ class Parent{
         int numConvertedCharacters;
 
         string getStaticString();
+    protected:
+        TimeClass time;
 
     public:
         Parent(string, string);
