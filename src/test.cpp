@@ -1,4 +1,4 @@
-#include "Parent.cpp"
+#include "Parent.h"
 #include<iostream>
 using namespace std;
 
