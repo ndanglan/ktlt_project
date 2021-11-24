@@ -1,9 +1,9 @@
-#include "Parent.h"
+#include "Encoder.h"
 #include<iostream>
 using namespace std;
 
 int main(){
-    Parent test("\\Thao\\C++\\src", "\\Thao\\C++\\src");
-    test.divideInputFiles();
+    Encoder* test = new Encoder("\\Thao\\C++\\src", "\\Thao\\C++\\bin");
+    test->printStatics(); 
     return 0;
 }
