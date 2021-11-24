@@ -18,4 +18,4 @@ $(BIN)/%.o: $(SRC)/%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean: 
-	del $(OBJECT) $(BIN)/$(TARGET)
+	del $(subst /,\, $(OBJECT)) $(BIN)\$(TARGET)
