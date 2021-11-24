@@ -1,7 +1,9 @@
+#include "Parent.cpp"
 #include<iostream>
 using namespace std;
 
 int main(){
-    cout << "Hello World";
+    Parent test("\\Thao\\C++\\src", "\\Thao\\C++\\src");
+    test.divideInputFiles();
     return 0;
 }
