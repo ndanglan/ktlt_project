@@ -1,3 +1,4 @@
+#pragma once
 #include "Parent.h"
 #include <iostream>
 #include <string.h>
