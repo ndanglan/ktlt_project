@@ -18,6 +18,7 @@ string Encoder::transform(){
     time.start();
     string result = "";
     cout << "Encode completely";
+    cout << endl << "Hello World";
     time.end();
     return result;
 }
