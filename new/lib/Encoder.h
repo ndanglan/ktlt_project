@@ -4,9 +4,10 @@
 #include <string.h>
 #include <map>
 
-
-class Encoder: public Parent{
-    public:
-        Encoder(string, string);
-        string transform(string);
+class Encoder : public Parent
+{
+public:
+    Encoder(string, string);
+    string transform(string);
+    void run();
 };

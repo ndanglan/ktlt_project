@@ -8,7 +8,7 @@ int main()
   for (int i = 0; i < 2; i++)
   {
     myfile.open("2222.txt", ios::app);
-    myfile << "Writing this to a file.\n";
+    myfile << "Writing this to a file.";
     myfile.close();
   }
   return 0;

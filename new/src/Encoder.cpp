@@ -42,8 +42,13 @@ string Encoder::transform(string inputFile)
             i++;
         } while (s[i] != '\0');
         result += '\n';
-        save_file(result, outputFiles);
     }
     time.end();
     return result;
+}
+
+void Encoder::run()
+{
+    result = transform(inputFiles);
+    save_file(result, outputFiles);
 }

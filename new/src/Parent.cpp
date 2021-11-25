@@ -59,14 +59,12 @@ string Parent::transform()
 
 void Parent::save(string s)
 {
-    ofstream myfile;
-    myfile.open("result.log", ios::app);
-    myfile << s;
-    myfile.close();
+    save_file(s, 'test.log');
 }
 
 void Parent::printStatics()
 {
     string statics = getStaticString();
+    save(statics);
     cout << statics;
 }
