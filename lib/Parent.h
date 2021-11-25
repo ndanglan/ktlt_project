@@ -3,6 +3,7 @@
 #include<string.h>
 #include "TimeClass.h"
 #include<map>
+#include <string>
 using namespace std;
 
 class Parent{
@@ -17,10 +18,11 @@ class Parent{
         string getStaticString();
     protected:
         TimeClass time;
+        map<string, string> hashFunction;
 
     public:
         Parent(string, string);
-        virtual map<string, string> getHashFunction(string, string);
+        map<string, string> getHashFunction(string, string);
         virtual string transform();
         void printStatics();
         void save();

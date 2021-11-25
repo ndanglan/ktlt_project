@@ -1,6 +1,7 @@
 #include<iostream>
 #include <map>
 #include<string.h>
+#include "read_file.h"
 #include<string>
 #include <utility>
 #include <vector>
@@ -32,9 +33,17 @@ string Parent::getStaticString(){
     return result;
 }
 
-map<string, string> Parent::getHashFunction(string file1, string file2){
+map<string, string> Parent::getHashFunction(string keysFile, string valuesFile){
     map<string, string> result;
-    result["test"] = "ok";
+    vector<string> keyStrings = read_file(keysFile);
+    vector<string> valueStrings = read_file(valuesFile);
+    auto itKey = keyStrings.begin();
+    auto itValue = valueStrings.begin();
+    while(itKey != keyStrings.end()){
+        result[*itKey] = *itValue;
+        itKey ++;
+        itValue ++;
+    }
     return result;
 }
 
