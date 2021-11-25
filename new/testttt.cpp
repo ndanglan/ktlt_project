@@ -7,9 +7,9 @@ int main()
   ofstream myfile;
   for (int i = 0; i < 2; i++)
   {
-    myfile.open("example.txt");
+    myfile.open("2222.txt", ios::app);
     myfile << "Writing this to a file.\n";
-    }
-  myfile.close();
+    myfile.close();
+  }
   return 0;
 }

@@ -7,6 +7,7 @@
 #include <vector>
 #include "string_divide.h"
 #include "Parent.h"
+#include <fstream>
 using namespace std;
 
 Parent::Parent(string inputFiles, string outputFiles)
@@ -56,9 +57,12 @@ string Parent::transform()
     return "";
 }
 
-void Parent::save()
+void Parent::save(string s)
 {
-    return;
+    ofstream myfile;
+    myfile.open("result.log", ios::app);
+    myfile << s;
+    myfile.close();
 }
 
 void Parent::printStatics()
