@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 what do you do
+=======
+how are you  
+im fine  
+t*ank ##u  
+>>>>>>> e91bfc20d8405f8ffe08b130e5a533a92bb05cf9
