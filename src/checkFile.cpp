@@ -3,23 +3,25 @@
 #include "checkFile.h"
 #include <string>
 #include <vector>
+#include <read_file.h>
 
 using namespace std;
 
-vector<string> read_file(string file)
-{
-    vector<string> result;
-    string text;
-    ifstream myFile(file);
-    while (getline(myFile, text))
-    {
-        result.push_back(text);
-    }
-    myFile.close();
-    return result;
-}
+// vector<string> read_file(string file)
+// {
+//     vector<string> result;
+//     string text;
+//     ifstream myFile(file);
+//     while (getline(myFile, text))
+//     {
+//         result.push_back(text);
+//     }
+//     myFile.close();
+//     return result;
+// }
 
-bool checkFile(string file) {
+bool checkFile(string file)
+{
     vector<string> myText = read_file(file);
     bool check = true;
 
@@ -30,7 +32,8 @@ bool checkFile(string file) {
             check = false;
             break;
         }
-        if (check == false) break;
+        if (check == false)
+            break;
     }
 
     return check;

@@ -1,5 +1,5 @@
 #include <cstdlib>
-#include<sstream>
+#include <sstream>
 #include <iostream>
 #include <map>
 #include <string.h>
@@ -136,12 +136,15 @@ void Parent::run()
     printErrors();
 }
 
-void Parent::printErrors(){
-    for(string msg:errorsMessages){
+void Parent::printErrors()
+{
+    for (string msg : errorsMessages)
+    {
         cout << msg << endl;
     }
 }
 
-void Parent::addErrorMessage(){
+void Parent::addErrorMessage()
+{
     return;
 }
