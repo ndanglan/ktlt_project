@@ -32,6 +32,6 @@ public:
     void printStatics();
     string basename(string);
     void run();
-    void addErrorMessage(char, int);
+    virtual void addErrorMessage();
     void printErrors();
 };

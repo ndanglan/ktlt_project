@@ -10,4 +10,5 @@ public:
     Encoder(string, string);
     string transformOneWord(string, int);
     string transformOneLine(string, int);
+    void addErrorMessage(char, int);
 };

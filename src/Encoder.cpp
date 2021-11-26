@@ -60,3 +60,10 @@ string Encoder::transformOneLine(string s, int line)
     }
     return result;
 }
+
+void Encoder::addErrorMessage(char c, int line){
+    stringstream ss;
+    ss << c;
+    string error_msg = "Error AB: Unrecognized character " + ss.str() + " on line " + to_string(line) + ".";
+    errorsMessages.push_back(error_msg);
+}
