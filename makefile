@@ -11,16 +11,16 @@ OBJECT = $(subst $(SRC)/,$(BIN)/,$(SOURCE:.cpp=.o))
 CC = g++
 CFLAGS = -Wall -I$(LIB)
 
-all: test $(BIN)/$(TARGET)
+all: test $(TARGET)
 
 test: 
 	@IF exist $(BIN) (echo "$(BIN) is already exist.") ELSE (mkdir $(BIN))
 
-$(BIN)/$(TARGET): $(OBJECT)
-	$(CC) $(OBJECT) -o $(BIN)/$(TARGET)
+$(TARGET): $(OBJECT)
+	$(CC) $(OBJECT) -o $(TARGET)
 
 $(BIN)/%.o: $(SRC)/%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean: 
-	del $(subst /,\, $(OBJECT)) $(BIN)\$(TARGET)
+	del $(subst /,\, $(OBJECT)) $(TARGET)

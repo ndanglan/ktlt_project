@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         // -t optional command
         else if (t == 1 && m == 0)
         {
-            Encoder *test = new Encoder("inputs/input_test.txt", "outputs/output_test.txt");
+            Encoder *test = new Encoder("input_test.txt", "outputs/output_test.txt");
             test->run();
             test->printStatics();
         }
