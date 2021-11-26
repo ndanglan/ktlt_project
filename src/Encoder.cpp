@@ -53,6 +53,7 @@ string Encoder::transformOneLine(string s, int line)
 {
     string result = "";
     vector<string> words = stringSplit(s, ' ');
+    cout << words.empty() << endl;
     for (string word : words)
     {
         if (word != "")
@@ -62,7 +63,12 @@ string Encoder::transformOneLine(string s, int line)
             {
                 numConvertedWords++;
             }
-            result += oneWordResult + "/ ";
+            result += oneWordResult;
+            if (word != words.back())
+            {
+
+                result += "/ ";
+            }
             numWords++;
         }
     }
