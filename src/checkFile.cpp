@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "checkFile.h"
+#include "read_file.h"
 #include <string>
 #include <vector>
 #include <read_file.h>

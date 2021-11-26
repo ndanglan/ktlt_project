@@ -10,6 +10,7 @@
 #include "string_divide.h"
 #include "Parent.h"
 #include <fstream>
+
 using namespace std;
 
 Parent::Parent(string inputFiles, string outputFiles)
@@ -120,16 +121,22 @@ string Parent::basename(string filename)
         return filename.substr(index + 1, len - index - 1);
     }
 
-    std::string s = filename.substr(index + 1, len - index);
-    std::size_t posIn = s.find(".");
-    s = s.substr(0, (posIn));
-    return s;
+    return filename.substr(index + 1, len - index);
+}
+
+string Parent::pureName(string basename)
+{
+    short posIn = basename.find(".");
+    basename = basename.substr(0, (posIn));
+    return basename;
 }
 
 void Parent::run()
 {
     string result = transform(inputFiles);
-    string nameLogFile = "log/" + basename(inputFiles) + "_" + basename(outputFiles) + "_" + time.getLogInfor() + ".log";
+    string inputBaseName = basename(inputFiles);
+    string outputBaseName = basename(outputFiles);
+    string nameLogFile = "log/" + pureName(inputBaseName) + "_" + pureName(outputBaseName) + "_" + time.getLogInfor() + ".log";
     staticString = getStaticString();
     save_file(result, outputFiles);
     save_file(staticString, nameLogFile);
