@@ -1,0 +1,10 @@
+Input file: input_test.txt
+Output file: output.txt
+Time Complete: 2021-Nov-26 18:7:43
+Duration [second]: 0.000000
+Word count in input files: 971
+Word converted: 912
+Word with error: 59
+Total number of characters: 5019
+Number of characters have been converted: 4887
+Number of characters are NOT converted: 132

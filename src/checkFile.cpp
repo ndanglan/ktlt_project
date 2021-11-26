@@ -20,8 +20,7 @@ using namespace std;
 //     return myText;
 // }
 
-bool checkFile(string file)
-{
+bool checkFile(string file){
     vector<string> myText = read_file(file);
     bool check = true;
 
@@ -32,8 +31,6 @@ bool checkFile(string file)
             check = false;
             break;
         }
-        if (check == false)
-            break;
     }
 
     return check;

@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <ctime>
 #include <sstream>
 #include <iostream>
 #include <map>
