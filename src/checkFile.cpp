@@ -24,7 +24,7 @@ bool checkFile(string file) {
 
     bool check = true;
 
-    for (int i = 0; i < result.size(); i++)
+    for (unsigned int i = 0; i < result.size(); i++)
     {
         if (result[i] != "." && result[i] != "-" && result[i] != "/")
         {
