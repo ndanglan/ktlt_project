@@ -20,7 +20,7 @@ bool checkFile(string file) {
             result.push_back(text);
         }
     }
-    myFile.close();
+    //myFile.close();
 
     bool check = true;
 

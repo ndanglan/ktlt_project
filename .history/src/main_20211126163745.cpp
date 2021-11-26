@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         else if (t == 0 && m == 1 && c == 1)
         {
             // Converting
-            Decoder *test = new Decoder(ip, op);
+            Decoder *test = new Decoder("ip", "ip");
             test->run();
             test->printStatics();
         }
@@ -101,7 +101,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         else if (t == 0 && m == 1)
         {
             // Converting
-            Decoder *test = new Decoder(ip, op);
+            Decoder *test = new Decoder("op", "ip");
             test->run();
             //test->printStatics();
         }

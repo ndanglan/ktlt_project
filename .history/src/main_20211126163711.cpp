@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         else if (t == 0 && m == 1 && c == 1)
         {
             // Converting
-            Decoder *test = new Decoder(ip, op);
+            Decoder *test = new Decoder("output_test.txt", "input_test.txt");
             test->run();
             test->printStatics();
         }
@@ -101,9 +101,9 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         else if (t == 0 && m == 1)
         {
             // Converting
-            Decoder *test = new Decoder(ip, op);
+            Decoder *test = new Decoder("output_test.txt", "input_test.txt");
             test->run();
-            //test->printStatics();
+            test->printStatics();
         }
 
         // -c optional command

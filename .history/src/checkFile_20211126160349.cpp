@@ -3,6 +3,7 @@
 #include "checkFile.h"
 #include <string>
 #include <vector>
+#include <read_file.h>
 
 using namespace std;
 
@@ -31,6 +32,8 @@ bool checkFile(string file) {
             check = false;
             break;
         }
+        if (check == false)
+            break;
     }
 
     return check;
