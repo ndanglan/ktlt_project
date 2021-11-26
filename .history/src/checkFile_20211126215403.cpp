@@ -7,6 +7,9 @@
 
 using namespace std;
 
+bool checkFile(string file) {
+    vector<string> result = read_file(file);
+
 bool checkFile(string file){
     vector<string> myText = read_file(file);
     bool check = true;

@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
     ifstream checkOP;
     checkOP.open(op);
     if (checkOP) {
-        cout << "Warning: " << op << " already exists. Do you wish to overwrite (y, n)?: ";
+        cout << "Warning: FILENAME already exists. Do you wish to overwrite (y, n)?: ";
         char c;
         cin >> c;
         if (c != 'y')
@@ -100,6 +100,10 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         // -t and -c optional command
         else if (t == 1 && m == 0 && c == 1)
         {
+<<<<<<< HEAD
+=======
+            cout << "hello" << endl;
+>>>>>>> bd42383bcc9e7858ace7792da2e525f33eed1b8c
             Encoder *test = new Encoder(ip, op);
             test->run();
             test->printStatics();
@@ -134,6 +138,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         // -c optional command
         else if (t == 0 && m == 0 && c == 1)
         {
+<<<<<<< HEAD
             bool check = checkFile(ip);
             if (check)
             {
@@ -149,6 +154,8 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
                 test->printStatics();
             }
 
+=======
+>>>>>>> bd42383bcc9e7858ace7792da2e525f33eed1b8c
         }
 
         else

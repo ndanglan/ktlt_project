@@ -15,6 +15,10 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
 {
     int count;
     char option[4][3] = {"-h", "-t", "-m", "-c"};
+<<<<<<< HEAD
+
+=======
+>>>>>>> bd42383bcc9e7858ace7792da2e525f33eed1b8c
     // -h optional command
     for (count = 0; count < argc; count++)
     {
@@ -38,6 +42,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         }
     }
 
+<<<<<<< HEAD
     // Check input file
     ifstream checkIP(ip);
     if (checkIP.fail()) {
@@ -49,7 +54,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
     ifstream checkOP;
     checkOP.open(op);
     if (checkOP) {
-        cout << "Warning: " << op << " already exists. Do you wish to overwrite (y, n)?: ";
+        cout << "Warning: FILENAME already exists. Do you wish to overwrite (y, n)?: ";
         char c;
         cin >> c;
         if (c != 'y')
@@ -69,6 +74,15 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         }
             
         else {
+=======
+    if (argc == 3)
+    {
+        bool check = checkFile(ip);
+        if (check)
+            cout << "Morse Code";
+        else
+        {
+>>>>>>> bd42383bcc9e7858ace7792da2e525f33eed1b8c
             Encoder *test = new Encoder(ip, op);
             test->run();
         }
@@ -95,11 +109,20 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
             }
         }
 
+<<<<<<< HEAD
         if (t != 0 && m != 0) unrecognizedCd();
+=======
+        if (t != 0 && m != 0)
+            unrecognizedCd();
+>>>>>>> bd42383bcc9e7858ace7792da2e525f33eed1b8c
 
         // -t and -c optional command
         else if (t == 1 && m == 0 && c == 1)
         {
+<<<<<<< HEAD
+=======
+            cout << "hello" << endl;
+>>>>>>> bd42383bcc9e7858ace7792da2e525f33eed1b8c
             Encoder *test = new Encoder(ip, op);
             test->run();
             test->printStatics();
@@ -134,6 +157,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         // -c optional command
         else if (t == 0 && m == 0 && c == 1)
         {
+<<<<<<< HEAD
             bool check = checkFile(ip);
             if (check)
             {
@@ -149,6 +173,8 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
                 test->printStatics();
             }
 
+=======
+>>>>>>> bd42383bcc9e7858ace7792da2e525f33eed1b8c
         }
 
         else

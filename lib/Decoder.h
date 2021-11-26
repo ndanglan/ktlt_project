@@ -6,10 +6,12 @@
 
 class Decoder : public Parent
 {
-public:
-    Decoder(string, string);
-    string transformOneCharacter(string, int);
-    string transformOneWord(string, int);
-    string transformOneLine(string, int);
-    void addErrorMessage(string, int);
+    protected:
+        string transformOneCharacter(string, int);
+        string transformOneWord(string, int);
+        string transformOneLine(string, int);
+        void addErrorMessage(string, int);
+
+    public:
+        Decoder(string, string);
 };

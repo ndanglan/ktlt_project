@@ -7,6 +7,19 @@
 
 using namespace std;
 
+// vector<string> read_file(string file)
+// {
+//     vector<string> myText;
+//     string text;
+//     ifstream myFile(file);
+//     while (getline(myFile, text))
+//     {
+//         myText.push_back(text);
+//     }
+//     myFile.close();
+//     return myText;
+// }
+
 bool checkFile(string file){
     vector<string> myText = read_file(file);
     bool check = true;

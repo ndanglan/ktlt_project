@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
     ifstream checkOP;
     checkOP.open(op);
     if (checkOP) {
-        cout << "Warning: " << op << " already exists. Do you wish to overwrite (y, n)?: ";
+        cout << "Warning: <<  already exists. Do you wish to overwrite (y, n)?: ";
         char c;
         cin >> c;
         if (c != 'y')

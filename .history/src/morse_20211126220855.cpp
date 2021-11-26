@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
             test->run();
         }
     }
-
+/*
     else if (argc == 4 || argc == 5)
     {
         // -t, -m, -c optional command
@@ -154,7 +154,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         else
             unrecognizedCd();
     }
-
+*/
     else
         unrecognizedCd();
 }

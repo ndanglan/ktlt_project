@@ -123,13 +123,13 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         }
 
         // -m optional command
-        else if (t == 0 && m == 1)
-        {
-            // Converting
-            Decoder *test = new Decoder(ip, op);
-            test->run();
-            //test->printStatics();
-        }
+        // else if (t == 0 && m == 1)
+        // {
+        //     // Converting
+        //     Decoder *test = new Decoder(ip, op);
+        //     test->run();
+        //     //test->printStatics();
+        // }
 
         // -c optional command
         else if (t == 0 && m == 0 && c == 1)
