@@ -127,7 +127,7 @@ string Parent::basename(string filename)
 void Parent::run()
 {
     string result = transform(inputFiles);
-    string nameLogFile = "log/" + basename(inputFiles) + "_" + basename(outputFiles) + ".log";
+    string nameLogFile = "log/" + basename(inputFiles) + "_" + basename(outputFiles) + "_" + time.getLogInfor() + ".log";
     staticString = getStaticString();
     save_file(result, outputFiles);
     cout << nameLogFile << endl;

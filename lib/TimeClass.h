@@ -17,4 +17,5 @@ class TimeClass{
         void end();        
         string getEndTime();
         double getDuration(); 
+        string getLogInfor();
 };

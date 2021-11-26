@@ -13,7 +13,7 @@ void TimeClass::start(){
 void TimeClass::end(){
     time_t endPoint = time(0);
     duration = difftime(endPoint, startPoint);
-    endTime = ctime(&now);
+    endTime = ctime(&endPoint);
 }
 
 string TimeClass::getEndTime(){
@@ -23,5 +23,9 @@ string TimeClass::getEndTime(){
 
 double TimeClass::getDuration(){
     return duration;
+}
+
+string TimeClass::getLogInfor(){
+    return "3";
 }
 
