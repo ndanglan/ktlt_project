@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 what would you do?
 Hello world
 hello  world
+=======
+ $   what would you do?
+   hello   world
+>>>>>>> 60375428a45aec89517aa53864b0d37461cafff9

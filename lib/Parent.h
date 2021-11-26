@@ -9,10 +9,6 @@ using namespace std;
 class Parent
 {
 private:
-    int numWords;
-    int numConvertedWords;
-    int numCharacters;
-    int numConvertedCharacters;
 
     string getStaticString();
 
@@ -22,12 +18,16 @@ protected:
     string staticString;
     TimeClass time;
     map<string, string> hashFunction;
+    int numWords;
+    int numConvertedWords;
+    int numCharacters;
+    int numConvertedCharacters;
 
 public:
     Parent(string, string);
     map<string, string> getHashFunction(string, string);
     string transform(string);
-    virtual string transformOneLine(string);
+    virtual string transformOneLine(string, int);
     void printStatics();
     string basename(string);
     void run();
