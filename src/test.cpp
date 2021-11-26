@@ -10,13 +10,7 @@ using namespace std;
 int main()
 {
     Encoder *test = new Encoder("inputs/input_test.txt", "outputs/output_test.txt");
-    string s;
-    cout << "Enter your string: ";
-    getline(cin, s);
-    string result = test->transform(s);
-    cout << result << endl;
+    test->run();
     test->printStatics();
-    // sau khi print sẽ save
-    test->save();
     return 0;
 }

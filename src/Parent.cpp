@@ -52,19 +52,36 @@ map<string, string> Parent::getHashFunction(string keysFile, string valuesFile)
     return result;
 }
 
-string Parent::transform()
+string Parent::transformOneLine(string s)
 {
     return "";
 }
 
-void Parent::save(string s)
+string Parent::transform(string inputFile)
 {
-    save_file(s, 'test.log');
+    vector<string> inputStrings = read_file(inputFile);
+
+    time.start();
+
+    string result = "";
+    for (auto const &s : inputStrings)
+    {
+        result += transformOneLine(s);
+        result += "\n";
+    }
+    time.end();
+    return result;
 }
 
 void Parent::printStatics()
 {
-    string statics = getStaticString();
-    save(statics);
-    cout << statics;
+    cout << staticString;
+}
+
+void Parent::run()
+{
+    string result = transform(inputFiles);
+    staticString = getStaticString();
+    save_file(result, outputFiles);
+    save_file(staticString, "test.log");
 }

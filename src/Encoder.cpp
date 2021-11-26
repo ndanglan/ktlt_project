@@ -17,38 +17,23 @@ Encoder::Encoder(string inputFiles, string outputFiles) : Parent(inputFiles, out
     hashFunction = getHashFunction("conventions\\normal_character.txt", "conventions\\morse_character.txt");
 }
 
-string Encoder::transform(string inputFile)
+string Encoder::transformOneLine(string s)
 {
-    vector<string> inputStrings = read_file(inputFile);
-
-    time.start();
-
     string result = "";
-    for (auto const &s : inputStrings)
+    int i = 0;
+    do
     {
-        int i = 0;
-        do
+        if (s[i] == ' ')
         {
-            if (s[i] == ' ')
-            {
-                result += "/";
-            }
-            else
-            {
-                stringstream ss;
-                ss << s[i];
-                result += hashFunction[ss.str()] + " ";
-            }
-            i++;
-        } while (s[i] != '\0');
-        result += '\n';
-    }
-    time.end();
+            result += "/";
+        }
+        else
+        {
+            stringstream ss;
+            ss << s[i];
+            result += hashFunction[ss.str()] + " ";
+        }
+        i++;
+    } while (s[i] != '\0');
     return result;
-}
-
-void Encoder::run()
-{
-    result = transform(inputFiles);
-    save_file(result, outputFiles);
 }

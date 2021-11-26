@@ -19,13 +19,15 @@ private:
 protected:
     string inputFiles;
     string outputFiles;
+    string staticString;
     TimeClass time;
     map<string, string> hashFunction;
 
 public:
     Parent(string, string);
     map<string, string> getHashFunction(string, string);
-    virtual string transform();
+    string transform(string);
+    virtual string transformOneLine(string);
     void printStatics();
-    void save();
+    void run();
 };
