@@ -1,15 +1,11 @@
 Input file: inputs/input_test.txt
 Output file: outputs/output_test.txt
-<<<<<<< HEAD:log/input_test_output_test.log
-Time Complete: Fri Nov 26 11:06:19 2021
-=======
-Time Complete: Fri Nov 26 10:51:03 2021
->>>>>>> 60375428a45aec89517aa53864b0d37461cafff9:test.log
+Time Complete: Fri Nov 26 11:15:36 2021
 
 Duration [second]: 0.000000
-Word count in input files: 7
-Word converted: 6
-Word with error: 1
-Total number of characters: 26
-Number of characters have been converted: 25
-Number of characters are NOT converted: 1
+Word count in input files: 20
+Word converted: 15
+Word with error: 5
+Total number of characters: 126
+Number of characters have been converted: 106
+Number of characters are NOT converted: 20
