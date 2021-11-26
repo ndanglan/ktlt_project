@@ -11,10 +11,11 @@ class Parent
 {
 private:
     string getStaticString();
+    void printErrors();
 
 protected:
-    string inputFiles;
-    string outputFiles;
+    string inputFile;
+    string outputFile;
     string staticString;
     TimeClass time;
     map<string, string> hashFunction;
@@ -23,16 +24,16 @@ protected:
     int numCharacters;
     int numConvertedCharacters;
     vector<string> errorsMessages;
-
-public:
-    Parent(string, string);
+    
     map<string, string> getHashFunction(string, string);
     string transform(string);
     virtual string transformOneLine(string, int);
-    void printStatics();
     string basename(string);
     string pureName(string);
-    void run();
     virtual void addErrorMessage();
-    void printErrors();
+
+public:
+    Parent(string, string);
+    void printStatics();
+    void run();
 };

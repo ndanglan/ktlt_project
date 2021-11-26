@@ -13,10 +13,10 @@
 
 using namespace std;
 
-Parent::Parent(string inputFiles, string outputFiles)
+Parent::Parent(string inputFile, string outputFile)
 {
-    this->inputFiles = inputFiles;
-    this->outputFiles = outputFiles;
+    this->inputFile = inputFile;
+    this->outputFile = outputFile;
     numWords = 0;
     numConvertedWords = 0;
     numCharacters = 0;
@@ -26,8 +26,8 @@ Parent::Parent(string inputFiles, string outputFiles)
 string Parent::getStaticString()
 {
     string result = "";
-    result += "Input file: " + inputFiles + "\n";
-    result += "Output file: " + outputFiles + "\n";
+    result += "Input file: " + inputFile + "\n";
+    result += "Output file: " + outputFile + "\n";
     result = result + "Time Complete: " + time.getEndTime() + "\n";
     result = result + "Duration [second]: " + to_string(time.getDuration()) + "\n";
     result += "Word count in input files: " + to_string(numWords) + "\n";
@@ -62,12 +62,13 @@ string Parent::transformOneLine(string s, int line)
 
 string Parent::transform(string inputFile)
 {
+    cout << inputFile << endl;
     vector<string> inputStrings = read_file(inputFile);
-
     time.start();
 
     string result = "";
     int i = 1;
+    cout << inputStrings.empty() << endl;
     for (auto const &s : inputStrings)
     {
         result += transformOneLine(s, i++);
@@ -133,12 +134,12 @@ string Parent::pureName(string basename)
 
 void Parent::run()
 {
-    string result = transform(inputFiles);
-    string inputBaseName = basename(inputFiles);
-    string outputBaseName = basename(outputFiles);
+    string result = transform(inputFile);
+    string inputBaseName = basename(inputFile);
+    string outputBaseName = basename(outputFile);
     string nameLogFile = "log/" + pureName(inputBaseName) + "_" + pureName(outputBaseName) + "_" + time.getLogInfor() + ".log";
     staticString = getStaticString();
-    save_file(result, outputFiles);
+    save_file(result, outputFile);
     save_file(staticString, nameLogFile);
     printErrors();
 }
