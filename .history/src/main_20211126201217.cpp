@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
 {
     int count;
     char option[4][3] = {"-h", "-t", "-m", "-c"};
+
     // -h optional command
     for (count = 0; count < argc; count++)
     {
@@ -38,11 +39,18 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         }
     }
 
+    // Check coinciding output file-name
+    if (existsCheck(op)) overrideFile();
+
+    // Auto detect itype of input file
     if (argc == 3)
     {
         bool check = checkFile(ip);
-        if (check)
-            cout << "Morse Code";
+        if (check) {
+            Decoder *test = new Decoder(ip, op);
+            test->run();
+        }
+            
         else {
             Encoder *test = new Encoder(ip, op);
             test->run();
@@ -109,6 +117,20 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         // -c optional command
         else if (t == 0 && m == 0 && c == 1)
         {
+            bool check = checkFile(ip);
+            if (check)
+            {
+                Decoder *test = new Decoder(ip, op);
+                test->run();
+                test->printStatics();
+            }
+
+            else
+            {
+                Encoder *test = new Encoder(ip, op);
+                test->run();
+                test->printStatics();
+            }
 
         }
 

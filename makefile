@@ -1,4 +1,4 @@
-TARGET = main.exe
+TARGET = morse.exe
 
 BIN = bin
 SRC = src
