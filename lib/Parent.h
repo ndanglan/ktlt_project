@@ -31,6 +31,7 @@ public:
     virtual string transformOneLine(string, int);
     void printStatics();
     string basename(string);
+    string pureName(string);
     void run();
     virtual void addErrorMessage();
     void printErrors();
