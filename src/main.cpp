@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include "Encoder.h"
+#include "Decoder.h"
 #include "read_file.h"
 #include "option.h"
 #include "checkFile.h"
@@ -73,7 +74,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         // -t optional command
         else if (t == 1 && m == 0)
         {
-            Encoder *test = new Encoder("input_test.txt", "outputs/output_test.txt");
+            Encoder *test = new Encoder("input_test.txt", "output_test.txt");
             test->run();
             test->printStatics();
         }
@@ -82,6 +83,9 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         else if (t == 0 && m == 1)
         {
             // Converting
+            Decoder *test = new Decoder("output_test.txt", "input_test.txt");
+            test->run();
+            test->printStatics();
         }
 
         else

@@ -11,7 +11,7 @@ bool checkFile(string file) {
     vector<string> myText = read_file(file);
     bool check = true;
 
-    for (int i = 0; i < myText.size(); i++)
+    for (unsigned int i = 0; i < myText.size(); i++)
     {
         if (myText[i] != "." && myText[i] != "-" && myText[i] != "/")
         {
