@@ -22,7 +22,7 @@ vector<string> read_file(string file)
 void save_file(string value, string file)
 {
     ofstream myfile;
-    myfile.open(file, ios::app);
+    myfile.open(file);
     myfile << value;
     myfile.close();
 }
