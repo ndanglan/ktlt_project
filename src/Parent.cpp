@@ -62,13 +62,11 @@ string Parent::transformOneLine(string s, int line)
 
 string Parent::transform(string inputFile)
 {
-    cout << inputFile << endl;
     vector<string> inputStrings = read_file(inputFile);
     time.start();
 
     string result = "";
     int i = 1;
-    cout << inputStrings.empty() << endl;
     for (auto const &s : inputStrings)
     {
         result += transformOneLine(s, i++);
