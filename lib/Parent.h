@@ -29,5 +29,6 @@ public:
     string transform(string);
     virtual string transformOneLine(string);
     void printStatics();
+    string basename(string);
     void run();
 };
