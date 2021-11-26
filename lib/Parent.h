@@ -3,13 +3,13 @@
 #include <string.h>
 #include "TimeClass.h"
 #include <map>
+#include <vector>
 #include <string>
 using namespace std;
 
 class Parent
 {
 private:
-
     string getStaticString();
 
 protected:
@@ -22,6 +22,7 @@ protected:
     int numConvertedWords;
     int numCharacters;
     int numConvertedCharacters;
+    vector<string> errorsMessages;
 
 public:
     Parent(string, string);
@@ -31,4 +32,6 @@ public:
     void printStatics();
     string basename(string);
     void run();
+    virtual void addErrorMessage();
+    void printErrors();
 };

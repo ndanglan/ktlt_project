@@ -1,4 +1,4 @@
-TARGET = main.exe
+TARGET = test.exe
 
 BIN = bin
 SRC = src

@@ -1,3 +1,5 @@
+#include <cstdlib>
+#include<sstream>
 #include <iostream>
 #include <map>
 #include <string.h>
@@ -131,4 +133,15 @@ void Parent::run()
     staticString = getStaticString();
     save_file(result, outputFiles);
     save_file(staticString, nameLogFile);
+    printErrors();
+}
+
+void Parent::printErrors(){
+    for(string msg:errorsMessages){
+        cout << msg << endl;
+    }
+}
+
+void Parent::addErrorMessage(){
+    return;
 }

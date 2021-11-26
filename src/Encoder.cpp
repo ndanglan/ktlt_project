@@ -18,7 +18,7 @@ Encoder::Encoder(string inputFiles, string outputFiles) : Parent(inputFiles, out
     hashFunction = getHashFunction("conventions\\normal_character.txt", "conventions\\morse_character.txt");
 }
 
-string Encoder::transformOneWord(string s){
+string Encoder::transformOneWord(string s, int line){
     string result;
     int i = 0;
     do
@@ -35,6 +35,7 @@ string Encoder::transformOneWord(string s){
             numConvertedCharacters ++; 
         }
         else{
+            addErrorMessage(s[i], line);
             result += "# ";
         }
         i++;
@@ -49,7 +50,7 @@ string Encoder::transformOneLine(string s, int line)
     vector<string> words = stringSplit(s, ' ');
     for(string word:words){
         if(word != ""){
-            string oneWordResult = transformOneWord(word);
+            string oneWordResult = transformOneWord(word, line);
             if(!checkCharacterExist(oneWordResult, '#')){
                 numConvertedWords ++;
             }
@@ -58,4 +59,11 @@ string Encoder::transformOneLine(string s, int line)
         }
     }
     return result;
+}
+
+void Encoder::addErrorMessage(char c, int line){
+    stringstream ss;
+    ss << c;
+    string error_msg = "Error AB: Unrecognized character " + ss.str() + " on line " + to_string(line) + ".";
+    errorsMessages.push_back(error_msg);
 }
