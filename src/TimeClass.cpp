@@ -11,8 +11,8 @@ void TimeClass::start(){
 }
 
 void TimeClass::end(){
-    time_t now = time(0);
-    duration = difftime(now, startPoint);
+    time_t endPoint = time(0);
+    duration = difftime(endPoint, startPoint);
     endTime = ctime(&now);
 }
 

@@ -10,6 +10,7 @@ class TimeClass{
         time_t startPoint;
         double duration;
         char* endTime;
+        time_t endPoint;
 
     public:
         void start();
