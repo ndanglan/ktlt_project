@@ -52,7 +52,7 @@ map<string, string> Parent::getHashFunction(string keysFile, string valuesFile)
     return result;
 }
 
-string Parent::transformOneLine(string s)
+string Parent::transformOneLine(string s, int line)
 {
     return "";
 }
@@ -64,9 +64,10 @@ string Parent::transform(string inputFile)
     time.start();
 
     string result = "";
+    int i = 1;
     for (auto const &s : inputStrings)
     {
-        result += transformOneLine(s);
+        result += transformOneLine(s, i++);
         result += "\n";
     }
     time.end();

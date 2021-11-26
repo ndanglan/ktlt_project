@@ -8,6 +8,6 @@ class Encoder : public Parent
 {
 public:
     Encoder(string, string);
-    string transform(string);
-    string transformOneLine(string);
+    string transformOneWord(string);
+    string transformOneLine(string, int);
 };

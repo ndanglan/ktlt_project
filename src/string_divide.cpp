@@ -6,7 +6,7 @@ using namespace std;
 
 vector<string> stringSplit(string str, char divideObject){
     vector<string> result;
-    int i = 0;
+    unsigned int i = 0;
     string subStr = "";
     while(i < str.length()){
         if(str[i] != divideObject){
@@ -20,4 +20,13 @@ vector<string> stringSplit(string str, char divideObject){
     }
     result.push_back(subStr);
     return result;
+}
+
+bool checkCharacterExist(string s, char c){
+    for(unsigned int i=0; i<s.length(); i++){
+        if(s[i] == c){
+            return true;
+        }
+    }
+    return false;
 }
