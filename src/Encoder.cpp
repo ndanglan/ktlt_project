@@ -24,7 +24,12 @@ string Encoder::transformOneWord(string s){
     do
     {
         stringstream ss;
-        ss << s[i];
+        if(s[i] >= 'A' && s[i] <= 'Z'){
+            ss << (char)(s[i] - 'A' + 'a');
+        }
+        else{
+            ss << s[i];
+        }
         if(hashFunction.find(ss.str()) != hashFunction.end()){
             result += hashFunction[ss.str()] + " ";
             numConvertedCharacters ++; 
