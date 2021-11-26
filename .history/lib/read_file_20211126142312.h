@@ -1,4 +1,4 @@
-#pragma once
+#prag
 #include <iostream>
 #include <vector>
 using namespace std;

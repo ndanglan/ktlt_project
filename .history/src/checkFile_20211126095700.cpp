@@ -1,11 +1,23 @@
 #include <iostream>
 #include <fstream>
 #include "checkFile.h"
-#include "read_file.h"
 #include <string>
 #include <vector>
 
 using namespace std;
+
+vector<string> read_file(string file)
+{
+    vector<string> result;
+    string text;
+    ifstream myFile(file);
+    while (getline(myFile, text))
+    {
+        result.push_back(text);
+    }
+    myFile.close();
+    return result;
+}
 
 bool checkFile(string file) {
     vector<string> myText = read_file(file);
