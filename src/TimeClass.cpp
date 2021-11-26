@@ -12,7 +12,7 @@ void TimeClass::start()
 
 void TimeClass::end()
 {
-    time_t endPoint = time(0);
+    endPoint = time(0);
     ltm = localtime(&endPoint);
     duration = difftime(endPoint, startPoint);
 }
@@ -73,3 +73,4 @@ string TimeClass::getLogInfor()
     string logInfo = year + month + day + "_" + time;
     return logInfo;
 }
+
