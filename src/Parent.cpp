@@ -1,3 +1,5 @@
+#include <cstdlib>
+#include<sstream>
 #include <iostream>
 #include <map>
 #include <string.h>
@@ -130,6 +132,19 @@ void Parent::run()
     string nameLogFile = "log/" + basename(inputFiles) + "_" + basename(outputFiles) + "_" + time.getLogInfor() + ".log";
     staticString = getStaticString();
     save_file(result, outputFiles);
-    cout << nameLogFile << endl;
     save_file(staticString, nameLogFile);
+    printErrors();
+}
+
+void Parent::printErrors(){
+    for(string msg:errorsMessages){
+        cout << msg << endl;
+    }
+}
+
+void Parent::addErrorMessage(char c, int line){
+    stringstream ss;
+    ss << c;
+    string error_msg = "Error AB: Unrecognized character " + ss.str() + " on line " + to_string(line) + ".";
+    errorsMessages.push_back(error_msg);
 }
