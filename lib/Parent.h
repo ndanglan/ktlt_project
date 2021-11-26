@@ -17,6 +17,7 @@ protected:
     string inputFile;
     string outputFile;
     string staticString;
+    string nameLogFile;
     TimeClass time;
     map<string, string> hashFunction;
     int numWords;
@@ -24,7 +25,7 @@ protected:
     int numCharacters;
     int numConvertedCharacters;
     vector<string> errorsMessages;
-    
+
     map<string, string> getHashFunction(string, string);
     string transform(string);
     virtual string transformOneLine(string, int);

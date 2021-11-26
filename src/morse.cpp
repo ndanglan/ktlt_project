@@ -43,7 +43,8 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         bool check = checkFile(ip);
         if (check)
             cout << "Morse Code";
-        else {
+        else
+        {
             Encoder *test = new Encoder(ip, op);
             test->run();
         }
@@ -70,11 +71,13 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
             }
         }
 
-        if (t != 0 && m != 0) unrecognizedCd();
+        if (t != 0 && m != 0)
+            unrecognizedCd();
 
         // -t and -c optional command
         else if (t == 1 && m == 0 && c == 1)
         {
+            cout << "hello" << endl;
             Encoder *test = new Encoder(ip, op);
             test->run();
             test->printStatics();
@@ -109,7 +112,6 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         // -c optional command
         else if (t == 0 && m == 0 && c == 1)
         {
-
         }
 
         else

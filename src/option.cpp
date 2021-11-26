@@ -26,7 +26,7 @@ void h_Option()
 void unrecognizedCd()
 {
     string s = "Error 00: Unknown command. Type \"morse -h\" for help.";
-    writeLogFile(s);
+    // writeLogFile(s);
     cout << s;
 }
 
@@ -40,22 +40,24 @@ void overrideFile()
     cout << "Warning: FILENAME already exists. Do you wish to overwrite (y, n)?";
     char c;
     cin >> c;
-    if (c == 'y') {
+    if (c == 'y')
+    {
         //overwrite
     }
-    else {
+    else
+    {
         cout << "Error 02: FILENAME is not allowed to access";
     }
 }
 
-void writeLogFile(string s)
-{
-    // Create and open a text file
-    ofstream MyFile("exp.log", ios_base::app);
+// void writeLogFile(string s)
+// {
+//     // Create and open a text file
+//     ofstream MyFile("exp.log", ios_base::app);
 
-    // Write to the file
-    MyFile << s << endl;
+//     // Write to the file
+//     MyFile << s << endl;
 
-    // Close the file
-    MyFile.close();
-}
+//     // Close the file
+//     MyFile.close();
+// }

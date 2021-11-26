@@ -11,6 +11,7 @@
 #include "string_divide.h"
 #include "Parent.h"
 #include <fstream>
+#include <unistd.h>
 
 using namespace std;
 
@@ -22,6 +23,7 @@ Parent::Parent(string inputFile, string outputFile)
     numConvertedWords = 0;
     numCharacters = 0;
     numConvertedCharacters = 0;
+    nameLogFile = "";
 }
 
 string Parent::getStaticString()
@@ -63,9 +65,10 @@ string Parent::transformOneLine(string s, int line)
 
 string Parent::transform(string inputFile)
 {
+
     vector<string> inputStrings = read_file(inputFile);
     time.start();
-
+    usleep(120000);
     string result = "";
     int i = 1;
     for (auto const &s : inputStrings)
@@ -80,6 +83,12 @@ string Parent::transform(string inputFile)
 void Parent::printStatics()
 {
     cout << staticString;
+    for (string s : errorsMessages)
+    {
+        staticString += s;
+        staticString += "\n";
+    }
+    save_file(staticString, nameLogFile);
 }
 
 string Parent::basename(string filename)
@@ -134,10 +143,10 @@ string Parent::pureName(string basename)
 void Parent::run()
 {
     string result = transform(inputFile);
+    staticString = getStaticString();
     string inputBaseName = basename(inputFile);
     string outputBaseName = basename(outputFile);
-    string nameLogFile = "log/" + pureName(inputBaseName) + "_" + pureName(outputBaseName) + "_" + time.getLogInfor() + ".log";
-    staticString = getStaticString();
+    nameLogFile = "log/" + pureName(inputBaseName) + "_" + pureName(outputBaseName) + "_" + time.getLogInfor() + ".log";
     save_file(result, outputFile);
     save_file(staticString, nameLogFile);
     printErrors();

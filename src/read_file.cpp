@@ -16,6 +16,7 @@ vector<string> read_file(string file)
         result.push_back(text);
     }
     myFile.close();
+    cout << result.empty() << endl;
     return result;
 }
 
