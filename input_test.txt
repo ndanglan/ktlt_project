@@ -1,1 +1,3 @@
 what hath god wrought
+test error &a $a )a (a)
+test 2 >>b >>a <<c

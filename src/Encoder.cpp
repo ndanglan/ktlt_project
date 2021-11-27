@@ -41,7 +41,7 @@ string Encoder::transformOneWord(string s, int line)
         else
         {
             addErrorMessage(s[i], line);
-            result += "# ";
+            result += "........ ";
         }
         i++;
         numCharacters++;
@@ -58,7 +58,7 @@ string Encoder::transformOneLine(string s, int line)
         if (word != "")
         {
             string oneWordResult = transformOneWord(word, line);
-            if (!checkCharacterExist(oneWordResult, '#'))
+            if (!checkCharacterExist(oneWordResult, '........'))
             {
                 numConvertedWords++;
             }

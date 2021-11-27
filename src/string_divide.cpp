@@ -1,18 +1,22 @@
-#include<iostream>
-#include<string.h>
-#include<vector>
+#include <iostream>
+#include <string.h>
+#include <vector>
 #include "string_divide.h"
 using namespace std;
 
-vector<string> stringSplit(string str, char divideObject){
+vector<string> stringSplit(string str, char divideObject)
+{
     vector<string> result;
     unsigned int i = 0;
     string subStr = "";
-    while(i < str.length()){
-        if(str[i] != divideObject){
+    while (i < str.length())
+    {
+        if (str[i] != divideObject)
+        {
             subStr += str[i];
-        } 
-        else{
+        }
+        else
+        {
             result.push_back(subStr);
             subStr = "";
         }
@@ -22,9 +26,12 @@ vector<string> stringSplit(string str, char divideObject){
     return result;
 }
 
-bool checkCharacterExist(string s, char c){
-    for(unsigned int i=0; i<s.length(); i++){
-        if(s[i] == c){
+bool checkCharacterExist(string s, string c)
+{
+    for (unsigned int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == c)
+        {
             return true;
         }
     }

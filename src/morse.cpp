@@ -31,17 +31,22 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
     for (int count = 0; count < argc; count++)
     {
         string arg = argv[count];
-        if (arg == "-t") nt++;
-        else if (arg == "-m") nm++;
+        if (arg == "-t")
+            nt++;
+        else if (arg == "-m")
+            nm++;
     }
-    if (nt != 0 && nm != 0) {
+    if (nt != 0 && nm != 0)
+    {
         unrecognizedCd();
         return 0;
     }
 
-    if (argc < 3) unrecognizedCd();
+    if (argc < 3)
+        unrecognizedCd();
 
-    else if (argc >= 3 && argc <=5) {
+    else if (argc >= 3 && argc <= 5)
+    {
 
         // Check File name
         string ip = argv[1];
@@ -59,7 +64,7 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         ifstream checkIP(ip);
         if (checkIP.fail())
         {
-            cout << "Error 01: " << ip << " could not be opened";
+            cout << "Error 01: " << ip << " could not be opened.";
             return 0;
         }
 
@@ -82,12 +87,14 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
         if (argc == 3)
         {
             bool check = checkFile(ip);
-            if (check) {
+            if (check)
+            {
                 Decoder *test = new Decoder(ip, op);
                 test->run();
             }
-                
-            else {
+
+            else
+            {
                 Encoder *test = new Encoder(ip, op);
                 test->run();
             }
@@ -122,7 +129,8 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
                 bool check = checkFile(ip);
                 if (check)
                 {
-                    cout << "Error 05: Wrong format of " << ip << " file. " << "Type \"morse -h\" for help.";
+                    cout << "Error 05: Wrong format of " << ip << " file. "
+                         << "Type \"morse -h\" for help.";
                     return 0;
                 }
 
@@ -210,7 +218,6 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
                     test->run();
                     test->printStatics();
                 }
-
             }
 
             else

@@ -39,7 +39,7 @@ string Decoder::transformOneWord(string s, int line)
         if (morseChar != "")
         {
             string morseResult = transformOneCharacter(morseChar, line);
-            if (morseResult == "#" || morseResult == "*")
+            if (morseResult == "........" || morseResult == "*")
             {
                 addErrorMessage(morseChar, line);
             }
@@ -63,7 +63,7 @@ string Decoder::transformOneLine(string s, int line)
         if (word != "")
         {
             string oneWordResult = transformOneWord(word, line);
-            if (!checkCharacterExist(oneWordResult, '#') && !checkCharacterExist(oneWordResult, '*'))
+            if (!checkCharacterExist(oneWordResult, '........') && !checkCharacterExist(oneWordResult, '*'))
             {
                 numConvertedWords++;
             }
