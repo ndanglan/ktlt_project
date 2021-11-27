@@ -22,11 +22,11 @@ vector<string> stringSplit(string str, char divideObject){
     return result;
 }
 
-bool checkCharacterExist(string s, char c){
+int checkCharacterExist(string s, char c){
     for(unsigned int i=0; i<s.length(); i++){
         if(s[i] == c){
-            return true;
+            return i;
         }
     }
-    return false;
+    return -1;
 }

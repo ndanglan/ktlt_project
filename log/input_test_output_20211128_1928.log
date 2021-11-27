@@ -1,0 +1,12 @@
+Input file: input_test.txt
+Output file: output.txt
+Time Complete: 2021-Nov-28 1:9:28
+Duration [second]: 0.000000
+Word count in input files: 7
+Word converted: 6
+Word with error: 1
+Total number of characters: 30
+Number of characters have been converted: 28
+Number of characters are NOT converted: 2
+Error 03: Unrecognized character ^ on line 1.
+Error 03: Unrecognized character $ on line 1.

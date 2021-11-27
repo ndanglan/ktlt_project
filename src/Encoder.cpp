@@ -3,6 +3,7 @@
 #include "Parent.h"
 #include <iterator>
 #include <map>
+#include <ostream>
 #include <stdexcept>
 #include <string.h>
 #include <sstream>
@@ -53,15 +54,27 @@ string Encoder::transformOneLine(string s, int line)
 {
     string result = "";
     vector<string> words = stringSplit(s, ' ');
+    int index = -1;
     for (string word : words)
     {
         if (word != "")
         {
             string oneWordResult = transformOneWord(word, line);
-            if (!checkCharacterExist(oneWordResult, '#'))
-            {
-                numConvertedWords++;
+            bool withError = false;
+            do{
+                index = checkCharacterExist(oneWordResult, '#'); 
+                if (index == -1)
+                {
+                    if(!withError){
+                        numConvertedWords++;
+                    }
+                }
+                else{
+                    oneWordResult = oneWordResult.substr(0, index) + "........" + oneWordResult.substr(index+1, oneWordResult.length() - index - 1);
+                    withError = true;
+                }
             }
+            while(index != -1);
             result += oneWordResult;
             if (word != words.back())
             {

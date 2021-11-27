@@ -1,0 +1,17 @@
+Input file: input_test.txt
+Output file: output.txt
+Time Complete: 2021-Nov-28 1:2:45
+Duration [second]: 0.000000
+Word count in input files: 1
+Word converted: 0
+Word with error: 1
+Total number of characters: 7
+Number of characters have been converted: 0
+Number of characters are NOT converted: 7
+Error 04: Invalid Morse Code nothing on line 1.
+Error 04: Invalid Morse Code gonna on line 1.
+Error 04: Invalid Morse Code change on line 1.
+Error 04: Invalid Morse Code my on line 1.
+Error 04: Invalid Morse Code love on line 1.
+Error 04: Invalid Morse Code for on line 1.
+Error 04: Invalid Morse Code you on line 1.

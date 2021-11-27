@@ -63,7 +63,7 @@ string Decoder::transformOneLine(string s, int line)
         if (word != "")
         {
             string oneWordResult = transformOneWord(word, line);
-            if (!checkCharacterExist(oneWordResult, '#') && !checkCharacterExist(oneWordResult, '*'))
+            if (checkCharacterExist(oneWordResult, '#') == -1 && checkCharacterExist(oneWordResult, '*') == -1)
             {
                 numConvertedWords++;
             }

@@ -1,0 +1,12 @@
+Input file: input_test.txt
+Output file: output.txt
+Time Complete: 2021-Nov-28 1:24:38
+Duration [second]: 0.000000
+Word count in input files: 7
+Word converted: 5
+Word with error: 2
+Total number of characters: 29
+Number of characters have been converted: 27
+Number of characters are NOT converted: 2
+Error 04: Invalid Morse Code ---. on line 1.
+Error 04: Invalid Morse Code ---. on line 1.
