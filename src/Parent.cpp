@@ -11,7 +11,6 @@
 #include "string_divide.h"
 #include "Parent.h"
 #include <fstream>
-#include <unistd.h>
 
 using namespace std;
 
@@ -68,7 +67,6 @@ string Parent::transform(string inputFile)
 
     vector<string> inputStrings = read_file(inputFile);
     time.start();
-    usleep(120000);
     string result = "";
     int i = 1;
     for (auto const &s : inputStrings)
