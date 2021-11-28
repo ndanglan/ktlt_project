@@ -38,10 +38,18 @@ string Decoder::transformOneWord(string s, int line)
     for (string morseChar : characters)
     {
         if(morseChar == "..-.."){
-            stringstream ss;
-            unsigned char c = 0x81;
-            ss << c;
-            result += ss.str();
+            wstring accentCode = L"é";
+            string accentChar;
+            int len = WideCharToMultiByte(CP_UTF8, 0, accentCode.c_str(), accentCode.length(), NULL, 0, NULL, NULL);
+            if (len > 0)
+            {
+                accentChar.resize(len);
+                WideCharToMultiByte(CP_UTF8, 0, accentCode.c_str(), accentCode.length(), &accentChar[0], len, NULL, NULL);
+            }
+            // stringstream ss;
+            // unsigned char c = 0x81;
+            // ss << c;
+            result += accentChar;
             numCharacters ++;
         }
         else if (morseChar != "")
