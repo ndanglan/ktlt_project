@@ -1,0 +1,11 @@
+Input file: input_text.txt
+Output file: output_text.txt
+Time Complete: 2021-Nov-28 22:42:45
+Duration [second]: 0.000000
+Word count in input files: 14
+Word converted: 13
+Word with error: 1
+Total number of characters: 62
+Number of characters have been converted: 61
+Number of characters are NOT converted: 1
+Error 03: Unrecognized character > on line 3.

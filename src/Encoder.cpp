@@ -28,6 +28,7 @@ string Encoder::transformOneWord(string s, int line)
         if(s[i] == -61 && s[i+1] == -87){
             result += "..-.. ";
             i++;
+            numConvertedCharacters ++;
         }
         else{
             stringstream ss;
