@@ -54,6 +54,9 @@ string Encoder::transformOneLine(string s, int line)
 {
     string result = "";
     vector<string> words = stringSplit(s, ' ');
+    while(words.back() == ""){
+        words.pop_back();
+    }
     int index = -1;
     for (string word : words)
     {
