@@ -15,7 +15,7 @@ bool checkFile(string file)
 
     for (unsigned int i = 0; i < myText.size(); i++)
     {
-        if (myText[i] != "." && myText[i] != "-" && myText[i] != "/")
+        if (myText[i] != "." && myText[i] != "-" && myText[i] != "/" && myText[i] != " ")
         {
             count++;
         }
