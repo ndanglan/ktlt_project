@@ -1,3 +1,7 @@
+~ To run this program: 
+    +) In window : run "mingw32-make clean" first and run "mingw32-make" after that run "morse.exe <input> <output> <command>"
+    +) In linux and macOS : run "make clean" first and run "make" after that run "morse.exe <input> <output> <command>"
+    
 ~ Morse code is a method often used together with an electrical telegraph to transfer text message remotely in late 19th
 century until early 20th century. The Morse code encodes text characters as sequences of two different signal durations,
 call dots and dashes, or dits and dahs, i.e. "." and "-". The dots represent short signal and the dashes represent the long

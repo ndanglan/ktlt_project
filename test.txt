@@ -15,10 +15,10 @@ Input text:
 
 Input morse:
 	- no error:
-		- no argument					ERROR
-		- "-t"						ERROR		
-		- "-c"						ERROR
-		- "-t -c"					ERROR
+		- no argument					OK
+		- "-t"						OK		
+		- "-c"						OK
+		- "-t -c"					OK
 		- "-m"						OK	
 		- "-m -c"					OK
 
