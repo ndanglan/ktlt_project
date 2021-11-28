@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string.h>
 #include <map>
+#include <windows.h>
+#include <wchar.h>
+#include <fstream>
 
 class Decoder : public Parent
 {
