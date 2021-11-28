@@ -90,12 +90,14 @@ int main(int argc, char *argv[]) // Number of strings in array argv and Array of
             bool check = checkFile(ip);
             if (check)
             {
+                cout << "input file is morse" << endl;
                 Decoder *test = new Decoder(ip, op);
                 test->run();
             }
 
             else
             {
+                cout << "input file is text" << endl;
                 Encoder *test = new Encoder(ip, op);
                 test->run();
             }

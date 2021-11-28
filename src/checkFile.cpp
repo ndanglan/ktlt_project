@@ -11,22 +11,17 @@ bool checkFile(string file)
 {
     vector<string> myText = read_file(file);
     bool check = true;
-    int count = 0;
 
     for (unsigned int i = 0; i < myText.size(); i++)
     {
-        if (myText[i] != "." && myText[i] != "-" && myText[i] != "/" && myText[i] != " ")
+        for (unsigned int j = 0; j < myText[i].length(); j++)
         {
-            count++;
+            if (myText[i][j] != '.' && myText[i][j] != '-' && myText[i][j] != '/' && myText[i][j] != ' ')
+            {
+                check = false;
+                break;
+            }
         }
-    }
-    if (count > 0)
-    {
-        check = true;
-    }
-    else
-    {
-        check = false;
     }
     return check;
 }

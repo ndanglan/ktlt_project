@@ -4,8 +4,8 @@ Input text:
 		- "-t"   					OK
 		- "-c"						OK
 		- "-t -c"					OK
-		- "-m"						ERROR
-		- "-m -c"					ERROR
+		- "-m"						OK
+		- "-m -c"					OK
 
 	- with error:
 		- 1 errors in a word				OK
