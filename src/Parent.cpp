@@ -50,7 +50,9 @@ map<string, string> Parent::getHashFunction(string keysFile, string valuesFile)
     auto itValue = valueStrings.begin();
     while (itKey != keyStrings.end())
     {
-        result[*itKey] = *itValue;
+        if(*itKey != "..-.."){
+            result[*itKey] = *itValue;
+        }
         itKey++;
         itValue++;
     }

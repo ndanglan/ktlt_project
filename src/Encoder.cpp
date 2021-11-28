@@ -22,27 +22,29 @@ Encoder::Encoder(string inputFiles, string outputFiles) : Parent(inputFiles, out
 string Encoder::transformOneWord(string s, int line)
 {
     string result;
-    int i = 0;
-    do
-    {
-        stringstream ss;
-        if (s[i] >= 'A' && s[i] <= 'Z')
-        {
-            ss << (char)(s[i] - 'A' + 'a');
+    unsigned int i = 0;
+    do{
+        // detect e accented
+        if(s[i] == -61 && s[i+1] == -87){
+            result += "..-.. ";
+            i++;
         }
-        else
-        {
-            ss << s[i];
-        }
-        if (hashFunction.find(ss.str()) != hashFunction.end())
-        {
-            result += hashFunction[ss.str()] + " ";
-            numConvertedCharacters++;
-        }
-        else
-        {
-            addErrorMessage(s[i], line);
-            result += "# ";
+        else{
+            stringstream ss;
+            if (s[i] >= 'A' && s[i] <= 'Z'){
+                ss << (char)(s[i] - 'A' + 'a');
+            }
+            else{
+                ss << s[i];
+            }
+            if (hashFunction.find(ss.str()) != hashFunction.end()){
+                result += hashFunction[ss.str()] + " ";
+                numConvertedCharacters++;
+            }
+            else{
+                addErrorMessage(s[i], line);
+                result += "# ";
+            }
         }
         i++;
         numCharacters++;

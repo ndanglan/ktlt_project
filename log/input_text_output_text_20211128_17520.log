@@ -1,0 +1,15 @@
+Input file: input_text.txt
+Output file: output_text.txt
+Time Complete: 2021-Nov-28 17:5:20
+Duration [second]: 0.000000
+Word count in input files: 6
+Word converted: 3
+Word with error: 3
+Total number of characters: 22
+Number of characters have been converted: 17
+Number of characters are NOT converted: 5
+Error 03: Unrecognized character Ã on line 1.
+Error 03: Unrecognized character © on line 1.
+Error 03: Unrecognized character < on line 1.
+Error 03: Unrecognized character # on line 1.
+Error 03: Unrecognized character < on line 2.

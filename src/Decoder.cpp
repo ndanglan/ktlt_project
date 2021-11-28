@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Decoder.h"
+#include <sstream>
 #include <string>
 #include <string.h>
 #include <vector>
@@ -36,7 +37,14 @@ string Decoder::transformOneWord(string s, int line)
     vector<string> characters = stringSplit(s, ' ');
     for (string morseChar : characters)
     {
-        if (morseChar != "")
+        if(morseChar == "..-.."){
+            stringstream ss;
+            unsigned char c = 0x81;
+            ss << c;
+            result += ss.str();
+            numCharacters ++;
+        }
+        else if (morseChar != "")
         {
             string morseResult = transformOneCharacter(morseChar, line);
             if (morseResult == "#" || morseResult == "*")
