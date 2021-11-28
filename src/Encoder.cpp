@@ -61,20 +61,22 @@ string Encoder::transformOneLine(string s, int line)
         {
             string oneWordResult = transformOneWord(word, line);
             bool withError = false;
-            do{
-                index = checkCharacterExist(oneWordResult, '#'); 
+            do
+            {
+                index = checkCharacterExist(oneWordResult, '#');
                 if (index == -1)
                 {
-                    if(!withError){
+                    if (!withError)
+                    {
                         numConvertedWords++;
                     }
                 }
-                else{
-                    oneWordResult = oneWordResult.substr(0, index) + "........" + oneWordResult.substr(index+1, oneWordResult.length() - index - 1);
+                else
+                {
+                    oneWordResult = oneWordResult.substr(0, index) + "........" + oneWordResult.substr(index + 1, oneWordResult.length() - index - 1);
                     withError = true;
                 }
-            }
-            while(index != -1);
+            } while (index != -1);
             result += oneWordResult;
             if (word != words.back())
             {

@@ -1,0 +1,18 @@
+Input file: input_test.txt
+Output file: output.txt
+Time Complete: 2021-Nov-27 21:51:33
+Duration [second]: 0.000000
+Word count in input files: 15
+Word converted: 0
+Word with error: 15
+Total number of characters: 50
+Number of characters have been converted: 42
+Number of characters are NOT converted: 8
+Error 03: Unrecognized character & on line 2.
+Error 03: Unrecognized character $ on line 2.
+Error 03: Unrecognized character > on line 3.
+Error 03: Unrecognized character > on line 3.
+Error 03: Unrecognized character > on line 3.
+Error 03: Unrecognized character > on line 3.
+Error 03: Unrecognized character < on line 3.
+Error 03: Unrecognized character < on line 3.
